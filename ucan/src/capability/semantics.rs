@@ -189,7 +189,7 @@ where
 
     fn parse_resource(&self, with: &Url) -> Option<Resource<S>> {
         Some(match with.path() {
-            "*" => Resource::Unscoped,
+            // "*" => Resource::Unscoped,
             _ => Resource::Scoped(self.parse_scope(with)?),
         })
     }
